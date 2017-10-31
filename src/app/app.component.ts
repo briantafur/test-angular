@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { PostService } from './post.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  response$;
+
+  constructor(private postService: PostService) {
+    this.response$ = postService.getPosts();
+
+  }
+
 }
