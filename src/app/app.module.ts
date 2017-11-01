@@ -18,8 +18,8 @@ import { PostService } from './post.service';
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: "authentication", component: AuthenticationComponent },
-      { path: "users", component: UsersComponent }
+      { path: 'authentication', component: AuthenticationComponent },
+      { path: 'users', component: UsersComponent }
     ])
   ],
   providers: [PostService],
